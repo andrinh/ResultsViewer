@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.NavigationView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:id="@+id/nav_view"
+    android:layout_width="320dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="@color/lightgrey">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/nav_header"/>
+
+        <LinearLayout
+            android:id="@+id/llayout_menu_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent_black_percent_25"
+            android:paddingLeft="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llayout_home_option"
+                android:layout_width="match_parent"
+                android:layout_height="58dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/option"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    fontPath="fonts/OpenSans-SemiBold.ttf"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llayout_conversation_option"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:text="@string/option_2"
+                    fontPath="fonts/OpenSans-SemiBold.ttf"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageview_new_message_navigation"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:src="@color/colorAccent"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.NavigationView>
